@@ -16,7 +16,7 @@ import android.widget.Button;
 
 import com.vnexpress.R;
 
-import model.FragTrangChu;
+import fragment.FragTrangChu;
 
 
 public class MainActivity extends AppCompatActivity
