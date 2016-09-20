@@ -22,34 +22,34 @@ import model.VnExpress;
 /**
  * Created by quang on 09/20/2016.
  */
-public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String>{
+public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     Activity context;
     ListView listView;
     vnexpressAdapter newsAdapter;
-    ArrayList arrayList_News;
+    ArrayList<VnExpress> arrayList_News;
     ProgressDialog progressDialog;
     String url = "http://vnexpress.net/rss/tin-moi-nhat.rss";
 
-    public AsyncTask_ReadRSS(Activity context)
-    {
-        this.context=context; 
+    public AsyncTask_ReadRSS(Activity context) {
+        this.context = context;
     }
+
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        arrayList_News = new ArrayList();
+        arrayList_News = new ArrayList<VnExpress>();
         Log.d("test", "on get data");
 //        progressDialog = new ProgressDialog(context);
 //        progressDialog.setTitle("Jsoup example");
 //        progressDialog.setMessage("Loading...");
 //        progressDialog.show();
-        progressDialog = progressDialog.show(context,"","Loading...");
+        progressDialog = progressDialog.show(context, "", "Loading...");
     }
 
     @Override
     protected String doInBackground(String... params) {
         try {
-            String title, arrDescription,description, link, date, image = "error";
+            String title, arrDescription, description, link, date, image = "error";
 
             Document doc = Jsoup.connect(url).get();
 
@@ -71,17 +71,16 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String>{
                         Log.d("test", "data tbody: " + tbody);
 
                         if (tbody == null) {
-                            Log.d("test","get image when data null");
-                            Log.d("test","get image when data null" + description);
+                            Log.d("test", "get image when data null");
+                            Log.d("test", "get image when data null" + description);
                             image = getImage(arrDescription);
-                        }
-                        else if(checkVideo(arrDescription)){
+                        } else if (checkVideo(arrDescription)) {
                             image = getImage(arrDescription);
-                        }else {
-                            Log.d("test","Check image in tbody: " + tbody.toString().indexOf("img"));
-                            if(tbody.toString().indexOf("img") == -1){
+                        } else {
+                            Log.d("test", "Check image in tbody: " + tbody.toString().indexOf("img"));
+                            if (tbody.toString().indexOf("img") == -1) {
                                 image = doc_image.select("parser_body").first().select("img").attr("src");
-                            }else {
+                            } else {
                                 image = tbody.select("img").attr("src");
                             }
                         }
@@ -91,7 +90,12 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String>{
                     }
                     Log.d("test", "title: " + title);
                     Log.d("test", "description: " + description);
-                    VnExpress news = new VnExpress(title, description, date, link, image);
+                    VnExpress news = new VnExpress();
+                    news.setLink(link);
+                    news.setImage(image);
+                    news.setTitle(title);
+                    news.setDescription(description);
+                    news.setDate(date);
                     arrayList_News.add(news);
                 }
             }
@@ -105,9 +109,13 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String>{
     @Override
     protected void onPostExecute(String s) {
         progressDialog.dismiss();
-        newsAdapter = new vnexpressAdapter(context, arrayList_News);
+        for (int i = 0; i < arrayList_News.size(); i++) {
+            Log.d("test", "Size arraylist " + arrayList_News.get(i).getTitle() + arrayList_News.get(i).getDescription() + arrayList_News.get(1).getDate());
+
+        }
+        newsAdapter = new vnexpressAdapter(context, R.layout.item_display, arrayList_News);
+        Log.d("test", "News Adapter " + newsAdapter.toString());
         listView = (ListView) context.findViewById(R.id.lvhienthi);
-        Log.d("test","listview: " + listView);
         listView.setAdapter(newsAdapter);
     }
 

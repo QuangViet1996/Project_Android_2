@@ -1,67 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="7dp"
     android:weightSum="1">
+
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
             android:id="@+id/img"
-            android:background="@drawable/item"/>
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/item"/>
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Lan Khuê khoe lưng với thiết kế đan dây"
-            android:id="@+id/txt_title"
-            android:textSize="32dp"
-            android:textStyle="bold"
-            android:textColor="#373636"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#FFF"
+        android:orientation="vertical"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp">
 
         <TextView
+            android:id="@+id/txt_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Huấn luyện viên The Face làm mẫu cho các trang phục mới của An Nhiên."
-            android:id="@+id/txt_description"
-            android:textIsSelectable="false"
-            android:textSize="23dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp" />
+            android:layout_marginRight="5dp"
+            android:text="Lan Khuê khoe lưng với thiết kế đan dây"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#373636"
+            android:textSize="22dp"
+            android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/txt_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="Fri, 16 Sep 2016 01:00:00 +0700"
-            android:id="@+id/txt_time"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
-            android:layout_marginLeft="5dp" />
+            android:text="Huấn luyện viên The Face làm mẫu cho các trang phục mới của An Nhiên."
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textIsSelectable="false"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:text="Fri, 16 Sep 2016 01:00:00 +0700"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textSize="14dp" />
     </LinearLayout>
 
 </LinearLayout>
