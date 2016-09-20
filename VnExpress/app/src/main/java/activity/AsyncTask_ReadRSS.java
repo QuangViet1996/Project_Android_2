@@ -28,7 +28,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     vnexpressAdapter newsAdapter;
     ArrayList<VnExpress> arrayList_News;
     ProgressDialog progressDialog;
-    String url = "http://vnexpress.net/rss/tin-moi-nhat.rss";
+    String url = "";
 
     public AsyncTask_ReadRSS(Activity context) {
         this.context = context;
@@ -48,6 +48,8 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
 
     @Override
     protected String doInBackground(String... params) {
+        url = params[0];
+        Log.d("test","url:" + url);
         try {
             String title, arrDescription, description, link, date, image = "error";
 
@@ -59,37 +61,27 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
 
                 link = element.select("link").text();
                 if (checkLink(link)) {
-                    title = element.select("title").text();
+                    Document doc_image = Jsoup.connect(link).get();
+                    Element tbody = doc_image.select("tbody img").first();
                     arrDescription = element.select("description").text();
+
+                    if (tbody == null) {
+                        image = getImage(arrDescription);
+                    } else if (checkVideo(arrDescription)) {
+                        image = getImage(arrDescription);
+                    } else {
+                        Log.d("test", "Check image in tbody: " + tbody.toString().indexOf("img"));
+                        if (tbody.toString().indexOf("img") == -1) {
+                            image = doc_image.select("parser_body").first().select("img").attr("src");
+                        } else {
+                            image = tbody.select("img").attr("src");
+                        }
+                    }
+//                    image = getImage(arrDescription);
+                    title = element.select("title").text();
                     description = getDescription(arrDescription);
                     date = element.select("pubDate").text();
 
-                    if (link != null) {
-                        Log.d("test", "link: " + link);
-                        Document doc_image = Jsoup.connect(link).get();
-                        Element tbody = doc_image.select("tbody img").first();
-                        Log.d("test", "data tbody: " + tbody);
-
-                        if (tbody == null) {
-                            Log.d("test", "get image when data null");
-                            Log.d("test", "get image when data null" + description);
-                            image = getImage(arrDescription);
-                        } else if (checkVideo(arrDescription)) {
-                            image = getImage(arrDescription);
-                        } else {
-                            Log.d("test", "Check image in tbody: " + tbody.toString().indexOf("img"));
-                            if (tbody.toString().indexOf("img") == -1) {
-                                image = doc_image.select("parser_body").first().select("img").attr("src");
-                            } else {
-                                image = tbody.select("img").attr("src");
-                            }
-                        }
-                        Log.d("test", "image: " + image);
-                    } else {
-                        Log.d("test", "link not found");
-                    }
-                    Log.d("test", "title: " + title);
-                    Log.d("test", "description: " + description);
                     VnExpress news = new VnExpress();
                     news.setLink(link);
                     news.setImage(image);
@@ -120,36 +112,22 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     }
 
     private String getImage(String description) {
-//       Log.d("test","getImage: " + description);
         String image = "error";
         int start = description.indexOf("src=\"http://");
-        int end = description.indexOf(".jpg");
+        int end = description.indexOf("\" >");
 
-        if (end == -1) {
-            Log.d("test", "jpg not found");
-            end = description.indexOf(".png");
-        }
-        if (end == -1) {
-            Log.d("test", "png not found");
-            end = description.indexOf(".gif");
-        }
-//        Log.d("test", "start:" + start + "");
-//        Log.d("test", "end:" + end + "");
         if ((start != -1) && (end != -1)) {
-            image = description.substring(start + 5, end + 4);
+            image = description.substring(start + 5, end);
         }
         return image;
     }
 
     private String getDescription(String descriptionData) {
-//        Log.d("test","getDescription: " + descriptionData);
-        int start = descriptionData.indexOf("br");
+        int start = descriptionData.indexOf("</br>");
         int end = descriptionData.indexOf(".");
-//        Log.d("test", "start2:" + start + "");
-//        Log.d("test", "end2:" + end + "");
         String description = "error";
         if ((start != -1) && (end != -1)) {
-            description = descriptionData.substring(start + 3);
+            description = descriptionData.substring(start + 5);
         }
         return description;
     }

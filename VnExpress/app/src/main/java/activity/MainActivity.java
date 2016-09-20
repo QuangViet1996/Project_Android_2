@@ -9,6 +9,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,14 +17,14 @@ import android.widget.ListView;
 
 import com.vnexpress.R;
 
-import fragment.FragTrangChu;
+import variables.variables;
 
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ListView lvhienthi;
     AsyncTask_ReadRSS asyncTask_readRSS;
-
+    variables val;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,21 +49,19 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content_fragment, new FragTrangChu()).commit();
-
         addControl();
         addEvent();
 
     }
 
     private void addEvent() {
-        AsyncTask();
+        Log.d("test","url: " + val.URL.length);
+        AsyncTask(val.URL[0]);
     }
 
-    public void AsyncTask() {
+    public void AsyncTask(String url) {
         asyncTask_readRSS = new AsyncTask_ReadRSS(MainActivity.this);
-        asyncTask_readRSS.execute();
+        asyncTask_readRSS.execute(url);
     }
 
     private void addControl() {
@@ -112,100 +111,76 @@ public class MainActivity extends AppCompatActivity
         switch (id) {
             case R.id.trangchu:
                 getSupportActionBar().setTitle("Trang chủ");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[0]);
                 break;
             case R.id.thoisu:
                 getSupportActionBar().setTitle("Thời sự");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[1]);
                 break;
             case R.id.thegioi:
                 getSupportActionBar().setTitle("Thế giới");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[2]);
                 break;
             case R.id.kinhdoanh:
                 getSupportActionBar().setTitle("Kinh doanh");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[3]);
                 break;
             case R.id.giaitri:
                 getSupportActionBar().setTitle("Giải trí");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[4]);
                 break;
             case R.id.thethao:
                 getSupportActionBar().setTitle("Thể thao");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[5]);
                 break;
             case R.id.phapluat:
                 getSupportActionBar().setTitle("Pháp luật");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[6]);
                 break;
             case R.id.giaoduc:
                 getSupportActionBar().setTitle("Giáo dục");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[7]);
                 break;
             case R.id.suckhoe:
                 getSupportActionBar().setTitle("Sức khỏe");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[8]);
                 break;
             case R.id.giadinh:
                 getSupportActionBar().setTitle("Gia đình");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[9]);
                 break;
             case R.id.dulich:
                 getSupportActionBar().setTitle("Du lịch");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[10]);
                 break;
             case R.id.khoahoc:
                 getSupportActionBar().setTitle("Khoa học");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[11]);
                 break;
             case R.id.sohoa:
                 getSupportActionBar().setTitle("Số hóa");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[12]);
                 break;
             case R.id.xe:
                 getSupportActionBar().setTitle("Xe");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[13]);
                 break;
             case R.id.congdong:
                 getSupportActionBar().setTitle("Cộng đồng");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[14]);
                 break;
             case R.id.tamsu:
                 getSupportActionBar().setTitle("Tâm sự");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[15]);
                 break;
             case R.id.cuoi:
                 getSupportActionBar().setTitle("Cười");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[16]);
                 break;
             case R.id.video:
                 getSupportActionBar().setTitle("Video");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
+                AsyncTask(val.URL[17]);
                 break;
-            case R.id.raovat:
-                getSupportActionBar().setTitle("Rao vặt");
-                getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.content_fragment, new FragTrangChu()).commit();
-                break;
-
         }
 
 

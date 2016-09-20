@@ -12,48 +12,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_2ae480a342d56b83a2c2474de2fa36259250557f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Joyboy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_8fb08bcd89e9865b062b211e48ecdd7b17c36509\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Joyboy\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.1.1\ab19bfb23f641f189b6dca9a4d393f8dc291103a\picasso-2.1.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.1.1_74a037fc4218e0aea43fbd327e23b8143afdec0c\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.8.3_cdd52d684ac41991d53b261b7ac12f7cff281b26\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
         <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_333f161d6b29f3dc2494ec3d41b9913a843be133\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_2ae480a342d56b83a2c2474de2fa36259250557f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -75,11 +48,29 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Joyboy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
+        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_8fb08bcd89e9865b062b211e48ecdd7b17c36509\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Joyboy\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.1.1\ab19bfb23f641f189b6dca9a4d393f8dc291103a\picasso-2.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
+        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.1.1_74a037fc4218e0aea43fbd327e23b8143afdec0c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="af0bb5d0f10afb08d6acc8320c7b5b2d7c345381">
+        sha1="21c258afff1e10a8bfb121f2293633225272c77a">
         <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7d5502794317c8d1a2d532abd14e685068251948\classes.dex" />
     </item>
     <item
@@ -88,8 +79,17 @@
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="36ae691ca825ec0f16a05f0132874c9699c1659c">
+        sha1="8c0b8f5a280846df4fb5f874c9b84f8eeef238d6">
         <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d9eec4ba4be77b33a0fd45fd85fc751a3e78923b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
+        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.8.3_cdd52d684ac41991d53b261b7ac12f7cff281b26\classes.dex" />
     </item>
     <item
         is-multidex="true"

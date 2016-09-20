@@ -5,11 +5,7 @@ package variables;
  */
 
 public class variables {
-    public static final String[] CATEGORIES = {
-            "Trang chủ", "Thời sự", "Thế giới", "Kinh doanh", "Giải trí", "Thể thao", "Pháp luật",
-            "Giáo dục", "Sức khỏe", "Gia đình", "Du lịch", "Khoa học", "Số hóa", "Xe", "Cộng đồng",
-            "Tâm sự", "Cười", "Video"
-    };
+
     public static final String[] URL = {
             "http://vnexpress.net/rss/tin-moi-nhat.rss",
             "http://vnexpress.net/rss/thoi-su.rss",

@@ -75,10 +75,7 @@
             android:id="@+id/video"
             android:icon="@drawable/video"
             android:title="Video" />
-        <item
-            android:id="@+id/raovat"
-            android:icon="@drawable/raovat"
-            android:title="Rao Vặt" />
+
 
     </group>
 
