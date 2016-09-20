@@ -5,7 +5,8 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ListView;
-import android.widget.TextView;
+
+import com.vnexpress.R;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -24,32 +25,25 @@ import model.VnExpress;
 public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String>{
     Activity context;
     ListView listView;
-    TextView txtTitle;
     vnexpressAdapter newsAdapter;
     ArrayList arrayList_News;
-    ProgressDialog mProgressDialog;
-    String url;
-    String webTitle = "";
+    ProgressDialog progressDialog;
+    String url = "http://vnexpress.net/rss/tin-moi-nhat.rss";
 
-    public AsyncTask_ReadRSS(Activity context,ListView lv)
+    public AsyncTask_ReadRSS(Activity context)
     {
-        this.context=context;
-        this.listView=lv;
-
+        this.context=context; 
     }
-
-
-
-
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
         arrayList_News = new ArrayList();
         Log.d("test", "on get data");
-        mProgressDialog = new ProgressDialog(context);
-        mProgressDialog.setTitle("Jsoup example");
-        mProgressDialog.setMessage("Loading...");
-        mProgressDialog.show();
+//        progressDialog = new ProgressDialog(context);
+//        progressDialog.setTitle("Jsoup example");
+//        progressDialog.setMessage("Loading...");
+//        progressDialog.show();
+        progressDialog = progressDialog.show(context,"","Loading...");
     }
 
     @Override
@@ -110,9 +104,10 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String>{
 
     @Override
     protected void onPostExecute(String s) {
-        mProgressDialog.dismiss();
-        txtTitle.setText(webTitle);
+        progressDialog.dismiss();
         newsAdapter = new vnexpressAdapter(context, arrayList_News);
+        listView = (ListView) context.findViewById(R.id.lvhienthi);
+        Log.d("test","listview: " + listView);
         listView.setAdapter(newsAdapter);
     }
 

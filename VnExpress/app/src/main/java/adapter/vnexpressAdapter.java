@@ -2,7 +2,7 @@ package adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +10,6 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.squareup.picasso.Picasso;
 import com.vnexpress.R;
 
 import java.util.ArrayList;
@@ -56,12 +55,11 @@ public class vnexpressAdapter extends BaseAdapter {
         TextView txtDescription = (TextView) convertView.findViewById(R.id.txt_description);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.img);
 
-
-
-        txtTitle.setText(Html.fromHtml(news.getTitle()));
-        txtDescription.setText(Html.fromHtml(news.getDescription()));
-        Picasso.with(context).load(arrayList.get(position).getImage())
-                .placeholder(R.drawable.newspaper).error(R.drawable.newspaper).into(imageView);
+        Log.d("test","titleadapter: " + news.getTitle());
+        txtTitle.setText(news.getTitle());
+        txtDescription.setText(news.getDescription());
+//        Picasso.with(context).load(arrayList.get(position).getImage())
+//                .placeholder(R.drawable.newspaper).error(R.drawable.newspaper).into(imageView);
 
         return convertView;
     }

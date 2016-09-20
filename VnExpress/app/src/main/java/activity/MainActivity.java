@@ -54,21 +54,17 @@ public class MainActivity extends AppCompatActivity
         addControl();
         addEvent();
 
-
-
-
-
     }
 
     private void addEvent() {
-        asyncTask_readRSS=new AsyncTask_ReadRSS(this,lvhienthi);
-        asyncTask_readRSS.execute("http://vnexpress.net/rss/tin-moi-nhat.rss");
+        asyncTask_readRSS=new AsyncTask_ReadRSS(MainActivity.this);
+        asyncTask_readRSS.execute();
 
 
     }
 
     private void addControl() {
-        lvhienthi= (ListView) findViewById(R.id.lvhienthi);
+        lvhienthi = (ListView) findViewById(R.id.lvhienthi);
 
     }
 
