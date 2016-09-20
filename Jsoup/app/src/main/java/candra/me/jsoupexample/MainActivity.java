@@ -2,24 +2,19 @@ package candra.me.jsoupexample;
 
 import android.app.ProgressDialog;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.nodes.TextNode;
 import org.jsoup.select.Elements;
-import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 

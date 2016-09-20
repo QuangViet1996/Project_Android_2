@@ -6,7 +6,7 @@ package model;
 public class VnExpress {
     String link, image, video, title, description, date;
 
-    public VnExpress() {
+    public VnExpress(String title, String description, String date, String link, String image) {
     }
 
     public VnExpress(String link, String image, String video, String title, String description, String date) {

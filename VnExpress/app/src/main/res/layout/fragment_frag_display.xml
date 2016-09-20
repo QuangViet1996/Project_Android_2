@@ -5,9 +5,9 @@
     android:background="#E9F0F2"
     tools:context="activity.MainActivity">
 
-    <Button
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trang chu"
-        android:id="@+id/btn_cho" />
+        android:id="@+id/lvhienthi"
+        android:layout_weight="1" />
 </LinearLayout>

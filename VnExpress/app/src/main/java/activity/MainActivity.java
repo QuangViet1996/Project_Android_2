@@ -12,7 +12,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ListView;
 
 import com.vnexpress.R;
 
@@ -21,7 +21,8 @@ import fragment.FragTrangChu;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-    Button btn;
+    ListView lvhienthi;
+    AsyncTask_ReadRSS asyncTask_readRSS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +51,24 @@ public class MainActivity extends AppCompatActivity
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.content_fragment, new FragTrangChu()).commit();
 
-        btn= (Button) findViewById(R.id.btn_cho);
+        addControl();
+        addEvent();
 
 
+
+
+
+    }
+
+    private void addEvent() {
+        asyncTask_readRSS=new AsyncTask_ReadRSS(this,lvhienthi);
+        asyncTask_readRSS.execute("http://vnexpress.net/rss/tin-moi-nhat.rss");
+
+
+    }
+
+    private void addControl() {
+        lvhienthi= (ListView) findViewById(R.id.lvhienthi);
 
     }
 
