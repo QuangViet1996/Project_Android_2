@@ -27,7 +27,9 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     ListView lvhienthi;
     AsyncTask_ReadRSS asyncTask_readRSS;
+    AsyncTask_VideoHTML asyncTask_video;
     variables val;
+    int position_video;
     WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,18 +67,34 @@ public class MainActivity extends AppCompatActivity
         lvhienthi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                position_video = i;
                 Bundle bundle = new Bundle();
-                bundle.putString("link", asyncTask_readRSS.arrayList_News.get(i).getLink());
-                Intent intent =  new Intent(MainActivity.this,WebView_Details.class);
-                intent.putExtra("data",bundle);
-                startActivity(intent);
+                try {
+                    bundle.putString("link", asyncTask_readRSS.arrayList_News.get(i).getLink());
+                    Intent intent =  new Intent(MainActivity.this,WebView_Details.class);
+                    intent.putExtra("data",bundle);
+                    startActivity(intent);
+                }
+                catch (Exception e)
+                {
+                   // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
+
+                }
+
             }
         });
+
+
+
     }
 
     private void addEvent() {
         Log.d("test","url: " + val.URL.length);
-        AsyncTask(val.URL[0]);
+        //AsyncTask(val.URL[0]);
+
+        AsyncTask_Video();
+
+
     }
 
     public void AsyncTask(String url) {
@@ -85,6 +103,14 @@ public class MainActivity extends AppCompatActivity
 
         asyncTask_readRSS = new AsyncTask_ReadRSS(MainActivity.this);
         asyncTask_readRSS.execute(url);
+    }
+
+    public void AsyncTask_Video() {
+//        Fragment fragment = new fragment();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment,fragment).commit();
+
+        asyncTask_video = new AsyncTask_VideoHTML(MainActivity.this);
+        asyncTask_video.execute();
     }
 
     @Override
@@ -197,7 +223,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.video:
                 getSupportActionBar().setTitle("Video");
-                AsyncTask(val.URL[17]);
+               AsyncTask_Video();
                 break;
         }
 

@@ -36,6 +36,7 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
+
         convertView = inflater.inflate(R.layout.item_display, null);
 
         TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_title);

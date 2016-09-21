@@ -3,102 +3,102 @@
 
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_de47e08cf3f8f30b06f79decd7019e22dea8d173\classes.dex" />
+        sha1="d77b6c2ce8425bcc864268c839d2f1c86f7f5f05">
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_59e50e87fc831acb1a135091f8d350c280ae4f90\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_2ae480a342d56b83a2c2474de2fa36259250557f\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Joyboy\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jar="C:\Users\quang\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_8fb08bcd89e9865b062b211e48ecdd7b17c36509\classes.dex" />
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_d0356fe70c1cff44089c32bd57f606651bfea330\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Joyboy\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.1.1\ab19bfb23f641f189b6dca9a4d393f8dc291103a\picasso-2.1.1.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.1.1_74a037fc4218e0aea43fbd327e23b8143afdec0c\classes.dex" />
+        sha1="f4417b9619a48a7547bf6bd2a6cd0d001cadfdb6">
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_0c07e2067baa37439a8afb54f8a00e446b2c9800\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.8.3_cdd52d684ac41991d53b261b7ac12f7cff281b26\classes.dex" />
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.8.3_0ad14deef64afe9956904dc8e4d675963c1e1582\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_333f161d6b29f3dc2494ec3d41b9913a843be133\classes.dex" />
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_734c9dfad635bcdbdc880cbdaffcf438907aee31\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
+        jar="C:\Users\quang\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.1.1\ab19bfb23f641f189b6dca9a4d393f8dc291103a\picasso-2.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.1.0_4dde24877d63ea30418bcd8b4674dfed892dc035\classes.dex" />
+        sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.1.1_8c532a8dd69394c7766b684812317debc9e7fdb8\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.0_ac073edbdf36713bab605469924349e19490948c\classes.dex" />
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.0_fa4acadd017cee5dc1da884b0d0b524a3617a5f3\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="f74058492abf40d5cafa372df4c3328c647dccad">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_7d5502794317c8d1a2d532abd14e685068251948\classes.dex" />
+        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.1.0_a1f224cdea013622fc513d81cefe7d7abc332af4\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="d84da767125334405e94d813977a1ff4b60ff708">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d9eec4ba4be77b33a0fd45fd85fc751a3e78923b\classes.dex" />
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_5961718058358cd618bc0848400a828525a92d8a\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_41b052709d49f9c61723456f03487a5b9a616f24\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="E:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.0_dab3b6d99baa633b9d6190fc174529272f9e9b78\classes.dex" />
+        <dex dex="E:\Android_TDC\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.0_8a7dc04620b3b677c066e2e9987cc054f1a8201d\classes.dex" />
     </item>
 
 </items>
