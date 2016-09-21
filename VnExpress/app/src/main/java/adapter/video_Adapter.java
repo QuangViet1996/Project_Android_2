@@ -1,6 +1,7 @@
 package adapter;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -41,7 +42,7 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
         TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_video_title);
         txtTitle.setText( arr.get(position).getTitle());
         VideoView videoView= (VideoView) convertView.findViewById(R.id.videoView);
-        videoView.setVideoPath(arr.get(position).getVideo());
+        videoView.setVideoURI(Uri.parse(arr.get(position).getVideo()));
         Log.d("test", "video:"+arr.get(position).getVideo());
         videoView.start();
         return convertView;
