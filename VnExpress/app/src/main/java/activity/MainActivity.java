@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity
 
     private void addEvent() {
         Log.d("test","url: " + val.URL.length);
-        //AsyncTask(val.URL[0]);
+        AsyncTask(val.URL[0]);
 
-        AsyncTask_Video();
+        //AsyncTask_Video();
 
 
     }
