@@ -26,7 +26,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     Activity context;
     ListView listView;
     vnexpressAdapter newsAdapter;
-    ArrayList<VnExpress> arrayList_News;
+    public static ArrayList<VnExpress> arrayList_News;
     ProgressDialog progressDialog;
     String url = "";
 
@@ -49,7 +49,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     @Override
     protected String doInBackground(String... params) {
         url = params[0];
-        Log.d("test","url:" + url);
+        Log.d("test", "url:" + url);
         try {
             String title, arrDescription, description, link, date, image = "error";
 
@@ -60,36 +60,36 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
                 Element element = elements.get(i);
 
                 link = element.select("link").text();
-                if (checkLink(link)) {
-                    Document doc_image = Jsoup.connect(link).get();
-                    Element tbody = doc_image.select("tbody img").first();
-                    arrDescription = element.select("description").text();
+//                if (checkLink(link)) {
+//                    Document doc_image = Jsoup.connect(link).get();
+//                    Element tbody = doc_image.select("tbody img").first();
+                arrDescription = element.select("description").text();
 
-                    if (tbody == null) {
-                        image = getImage(arrDescription);
-                    } else if (checkVideo(arrDescription)) {
-                        image = getImage(arrDescription);
-                    } else {
-                        Log.d("test", "Check image in tbody: " + tbody.toString().indexOf("img"));
-                        if (tbody.toString().indexOf("img") == -1) {
-                            image = doc_image.select("parser_body").first().select("img").attr("src");
-                        } else {
-                            image = tbody.select("img").attr("src");
-                        }
-                    }
-//                    image = getImage(arrDescription);
-                    title = element.select("title").text();
-                    description = getDescription(arrDescription);
-                    date = element.select("pubDate").text();
+//                    if (tbody == null) {
+//                        image = getImage(arrDescription);
+//                    } else if (checkVideo(arrDescription)) {
+//                        image = getImage(arrDescription);
+//                    } else {
+//                        Log.d("test", "Check image in tbody: " + tbody.toString().indexOf("img"));
+//                        if (tbody.toString().indexOf("img") == -1) {
+//                            image = doc_image.select("parser_body").first().select("img").attr("src");
+//                        } else {
+//                            image = tbody.select("img").attr("src");
+//                        }
+//                    }
+                image = getImage(arrDescription);
+                title = element.select("title").text();
+                description = getDescription(arrDescription);
+                date = element.select("pubDate").text();
 
-                    VnExpress news = new VnExpress();
-                    news.setLink(link);
-                    news.setImage(image);
-                    news.setTitle(title);
-                    news.setDescription(description);
-                    news.setDate(date);
-                    arrayList_News.add(news);
-                }
+                VnExpress news = new VnExpress();
+                news.setLink(link);
+                news.setImage(image);
+                news.setTitle(title);
+                news.setDescription(description);
+                news.setDate(date);
+                arrayList_News.add(news);
+//                }
             }
 
         } catch (IOException e) {

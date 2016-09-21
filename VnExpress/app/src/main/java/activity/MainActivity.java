@@ -1,5 +1,6 @@
 package activity;
 
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebView;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.vnexpress.R;
@@ -25,6 +28,7 @@ public class MainActivity extends AppCompatActivity
     ListView lvhienthi;
     AsyncTask_ReadRSS asyncTask_readRSS;
     variables val;
+    WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,19 +58,33 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    private void addControl() {
+        lvhienthi = (ListView) findViewById(R.id.lvhienthi);
+        webView = (WebView) findViewById(R.id.webview_details);
+
+        lvhienthi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Bundle bundle = new Bundle();
+                bundle.putString("link", asyncTask_readRSS.arrayList_News.get(i).getLink());
+                Intent intent =  new Intent(MainActivity.this,WebView_Details.class);
+                intent.putExtra("data",bundle);
+                startActivity(intent);
+            }
+        });
+    }
+
     private void addEvent() {
         Log.d("test","url: " + val.URL.length);
         AsyncTask(val.URL[0]);
     }
 
     public void AsyncTask(String url) {
+//        Fragment fragment = new fragment();
+//        getSupportFragmentManager().beginTransaction().replace(R.id.content_fragment,fragment).commit();
+
         asyncTask_readRSS = new AsyncTask_ReadRSS(MainActivity.this);
         asyncTask_readRSS.execute(url);
-    }
-
-    private void addControl() {
-        lvhienthi = (ListView) findViewById(R.id.lvhienthi);
-
     }
 
     @Override
