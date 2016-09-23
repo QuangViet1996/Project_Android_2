@@ -1,9 +1,14 @@
 package adapter;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Surface;
+import android.view.SurfaceHolder;
+import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -33,8 +38,8 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
         this.context = context;
         this.resource = resource;
         this.arr = arr;
-
     }
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
@@ -42,16 +47,9 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
         convertView = inflater.inflate(R.layout.item_video, null);
 
         TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_video_title);
-        txtTitle.setText( arr.get(position).getTitle());
-        VideoView videoView= (VideoView) convertView.findViewById(R.id.videoView);
-        videoView.setVideoURI(Uri.parse(arr.get(position).getVideo()));
-        Log.d("test", "video:"+arr.get(position).getVideo());
-
-        mediaController= new MediaController(this.context);
-        mediaController.setAnchorView(videoView);
-        mediaController.setMediaPlayer(videoView);
-        videoView.setMediaController(mediaController);
-
+        txtTitle.setText(arr.get(position).getTitle());
+        final SurfaceView videoView = (SurfaceView) convertView.findViewById(R.id.surfaceView);
+        SurfaceHolder surfaceHolder = videoView.getHolder();
         return convertView;
     }
 

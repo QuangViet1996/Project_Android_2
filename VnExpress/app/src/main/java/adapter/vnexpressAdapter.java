@@ -1,6 +1,7 @@
 package adapter;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,12 +26,14 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
     Activity context;
     int resource;
     ArrayList<VnExpress> arr;
+    ArrayList<Bitmap> bitmaps;
 
-    public vnexpressAdapter(Activity context, int resource, ArrayList<VnExpress> arr) {
+    public vnexpressAdapter(Activity context, int resource, ArrayList<VnExpress> arr, ArrayList<Bitmap> bitmaps) {
         super(context, resource, arr);
         this.context = context;
         this.resource = resource;
         this.arr = arr;
+        this.bitmaps = bitmaps;
 
     }
     @Override
@@ -43,13 +46,14 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
         TextView txtDescription = (TextView) convertView.findViewById(R.id.txt_description);
         TextView txtDate = (TextView) convertView.findViewById(R.id.txt_time);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.img);
-        Picasso.with(context).load(arr.get(position).getImage())
-                .error(R.drawable.item).into(imageView);
+//        Picasso.with(context).load(arr.get(position).getImage())
+//                .error(R.drawable.item).into(imageView);
+        imageView.setImageBitmap(bitmaps.get(position));
         Log.d("test","titleadapter: " + arr.get(position) + arr.get(position).getTitle());
         txtTitle.setText( arr.get(position).getTitle());
         txtDescription.setText( arr.get(position).getDescription());
         txtDate.setText( arr.get(position).getDate());
-       // Bitmap bitmap = null;
+
         return convertView;
     }
 
