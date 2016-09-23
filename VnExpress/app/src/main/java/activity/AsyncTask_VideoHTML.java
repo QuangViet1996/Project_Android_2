@@ -82,7 +82,6 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
                 news2.setTitle(title_video);
                 arrayList_Video.add(news2);
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -99,7 +98,7 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
         }
         newsAdapter = new video_Adapter(context, R.layout.item_video, arrayList_Video);
         Log.d("test", "News Adapter " + newsAdapter.toString());
-        listView = (ListView) context.findViewById(R.id.lvhienthi);
+        listView = (ListView) context.findViewById(R.id.listview);
         listView.setAdapter(newsAdapter);
 
 

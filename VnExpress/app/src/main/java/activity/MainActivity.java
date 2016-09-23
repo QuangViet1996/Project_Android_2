@@ -7,6 +7,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -15,22 +16,26 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
+import com.github.ksoichiro.android.observablescrollview.ObservableListView;
+import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
+import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
+import com.github.ksoichiro.android.observablescrollview.ScrollState;
 import com.vnexpress.R;
 
 import variables.variables;
 
 
 public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
-    ListView lvhienthi;
+        implements  ObservableScrollViewCallbacks, NavigationView.OnNavigationItemSelectedListener{
+    ObservableListView listview;
     AsyncTask_ReadRSS asyncTask_readRSS;
     AsyncTask_VideoHTML asyncTask_video;
     variables val;
     int position_video;
-    WebView webView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -61,10 +66,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     private void addControl() {
-        lvhienthi = (ListView) findViewById(R.id.lvhienthi);
-        webView = (WebView) findViewById(R.id.webview_details);
+        listview = (ObservableListView) findViewById(R.id.listview);
 
-        lvhienthi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 position_video = i;
@@ -78,19 +82,16 @@ public class MainActivity extends AppCompatActivity
                 catch (Exception e)
                 {
                    // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
-
                 }
-
             }
         });
-
-
-
     }
 
     private void addEvent() {
+        listview.setScrollViewCallbacks(this);
         Log.d("test","url: " + val.URL.length);
         AsyncTask(val.URL[0]);
+
 
         //AsyncTask_Video();
 
@@ -234,4 +235,30 @@ public class MainActivity extends AppCompatActivity
     }
 
 
+    @Override
+    public void onScrollChanged(int scrollY, boolean firstScroll, boolean dragging) {
+
+    }
+
+    @Override
+    public void onDownMotionEvent() {
+
+    }
+
+    @Override
+    public void onUpOrCancelMotionEvent(ScrollState scrollState) {
+        ActionBar ab = getSupportActionBar();
+        if (ab == null) {
+            return;
+        }
+        if (scrollState == scrollState.UP) {
+            if (ab.isShowing()) {
+                ab.hide();
+            }
+        } else if (scrollState == scrollState.DOWN) {
+            if (!ab.isShowing()) {
+                ab.show();
+            }
+        }
+    }
 }

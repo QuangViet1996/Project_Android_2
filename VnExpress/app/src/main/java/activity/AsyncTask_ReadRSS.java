@@ -107,7 +107,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
         }
         newsAdapter = new vnexpressAdapter(context, R.layout.item_display, arrayList_News);
         Log.d("test", "News Adapter " + newsAdapter.toString());
-        listView = (ListView) context.findViewById(R.id.lvhienthi);
+        listView = (ListView) context.findViewById(R.id.listview);
         listView.setAdapter(newsAdapter);
     }
 

@@ -8,26 +8,12 @@
     tools:context="activity.MainActivity"
     >
 
-    <!--<FrameLayout-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true"-->
-        <!--android:id="@+id/content_fragment"-->
-        <!--&gt;</FrameLayout>-->
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <com.github.ksoichiro.android.observablescrollview.ObservableListView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/listview"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#f0f0f0"
-        tools:context="activity.MainActivity">
+        android:layout_height="match_parent" />
 
-        <ListView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/lvhienthi"
-            android:layout_weight="1" />
-    </LinearLayout>
 
 
 </RelativeLayout>

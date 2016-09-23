@@ -40,16 +40,18 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
         LayoutInflater inflater = context.getLayoutInflater();
 
         convertView = inflater.inflate(R.layout.item_video, null);
-        mediaController= new MediaController(this.context);
 
         TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_video_title);
         txtTitle.setText( arr.get(position).getTitle());
         VideoView videoView= (VideoView) convertView.findViewById(R.id.videoView);
         videoView.setVideoURI(Uri.parse(arr.get(position).getVideo()));
         Log.d("test", "video:"+arr.get(position).getVideo());
-        videoView.setMediaController(mediaController);
+
+        mediaController= new MediaController(this.context);
         mediaController.setAnchorView(videoView);
-        videoView.stopPlayback();
+        mediaController.setMediaPlayer(videoView);
+        videoView.setMediaController(mediaController);
+
         return convertView;
     }
 
