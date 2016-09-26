@@ -12,6 +12,7 @@ import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
@@ -47,9 +48,10 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
         convertView = inflater.inflate(R.layout.item_video, null);
 
         TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_video_title);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
+
         txtTitle.setText(arr.get(position).getTitle());
-        final SurfaceView videoView = (SurfaceView) convertView.findViewById(R.id.surfaceView);
-        SurfaceHolder surfaceHolder = videoView.getHolder();
+        imageView.setImageBitmap(arr.get(position).getImage());
         return convertView;
     }
 

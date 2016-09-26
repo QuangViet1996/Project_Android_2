@@ -30,7 +30,6 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     ListView listView;
     vnexpressAdapter newsAdapter;
     public static ArrayList<VnExpress> arrayList_News;
-    ArrayList<Bitmap> bitmaps;
     ProgressDialog progressDialog;
     String url = "";
 
@@ -42,7 +41,6 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
     protected void onPreExecute() {
         super.onPreExecute();
         arrayList_News = new ArrayList<VnExpress>();
-        bitmaps = new ArrayList<Bitmap>();
         Log.d("test", "on get data");
         progressDialog = progressDialog.show(context, "", "Loading...");
     }
@@ -84,15 +82,14 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
                 date = element.select("pubDate").text();
 
                 VnExpress news = new VnExpress();
-
+                URL url = new URL(image);
+                Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
                 news.setLink(link);
-                news.setImage(image);
+                news.setImage(bitmap);
                 news.setTitle(title);
                 news.setDescription(description);
                 news.setDate(date);
-                URL url = new URL(image);
-                Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
-                bitmaps.add(bitmap);
+
                 arrayList_News.add(news);
 //                }
             }
@@ -110,7 +107,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
             Log.d("test", "Size arraylist " + arrayList_News.get(i).getTitle() + arrayList_News.get(i).getDescription() + arrayList_News.get(1).getDate());
 
         }
-        newsAdapter = new vnexpressAdapter(context, R.layout.item_display, arrayList_News,bitmaps);
+        newsAdapter = new vnexpressAdapter(context, R.layout.item_display, arrayList_News);
         Log.d("test", "News Adapter " + newsAdapter.toString());
         listView = (ListView) context.findViewById(R.id.listview);
         listView.setAdapter(newsAdapter);

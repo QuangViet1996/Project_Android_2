@@ -26,14 +26,12 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
     Activity context;
     int resource;
     ArrayList<VnExpress> arr;
-    ArrayList<Bitmap> bitmaps;
 
-    public vnexpressAdapter(Activity context, int resource, ArrayList<VnExpress> arr, ArrayList<Bitmap> bitmaps) {
+    public vnexpressAdapter(Activity context, int resource, ArrayList<VnExpress> arr) {
         super(context, resource, arr);
         this.context = context;
         this.resource = resource;
         this.arr = arr;
-        this.bitmaps = bitmaps;
 
     }
     @Override
@@ -48,7 +46,7 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
         ImageView imageView = (ImageView) convertView.findViewById(R.id.img);
 //        Picasso.with(context).load(arr.get(position).getImage())
 //                .error(R.drawable.item).into(imageView);
-        imageView.setImageBitmap(bitmaps.get(position));
+        imageView.setImageBitmap(arr.get(position).getImage());
         Log.d("test","titleadapter: " + arr.get(position) + arr.get(position).getTitle());
         txtTitle.setText( arr.get(position).getTitle());
         txtDescription.setText( arr.get(position).getDescription());
