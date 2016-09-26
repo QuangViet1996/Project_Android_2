@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.webkit.WebView;
 
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
@@ -16,7 +17,7 @@ import com.vnexpress.R;
  * Created by Joyboy on 9/20/2016.
  */
 
-public class WebView_Details extends AppCompatActivity  implements ObservableScrollViewCallbacks{
+public class WebView_Details extends AppCompatActivity implements ObservableScrollViewCallbacks {
     ObservableWebView webView;
 
     @Override
@@ -28,7 +29,7 @@ public class WebView_Details extends AppCompatActivity  implements ObservableScr
         setSupportActionBar(toolbar);
 
         Intent intent = getIntent();
-        if(intent != null){
+        if (intent != null) {
             Bundle bundle = intent.getBundleExtra("data");
             String link = bundle.getString("link");
 
@@ -42,7 +43,7 @@ public class WebView_Details extends AppCompatActivity  implements ObservableScr
             getSupportActionBar().setTitle("Nội dung chi tiết");
             webView.setScrollViewCallbacks(this);
         }
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
 
@@ -70,6 +71,15 @@ public class WebView_Details extends AppCompatActivity  implements ObservableScr
             if (!ab.isShowing()) {
                 ab.show();
             }
+        }
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 }
