@@ -2,6 +2,7 @@ package adapter;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +14,9 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 import com.vnexpress.R;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import model.VnExpress;
@@ -44,9 +48,10 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
         TextView txtDescription = (TextView) convertView.findViewById(R.id.txt_description);
         TextView txtDate = (TextView) convertView.findViewById(R.id.txt_time);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.img);
-//        Picasso.with(context).load(arr.get(position).getImage())
-//                .error(R.drawable.item).into(imageView);
-        imageView.setImageBitmap(arr.get(position).getImage());
+        Picasso.with(context).load(arr.get(position).getImage())
+                .error(R.drawable.item).into(imageView);
+
+
         Log.d("test","titleadapter: " + arr.get(position) + arr.get(position).getTitle());
         txtTitle.setText( arr.get(position).getTitle());
         txtDescription.setText( arr.get(position).getDescription());

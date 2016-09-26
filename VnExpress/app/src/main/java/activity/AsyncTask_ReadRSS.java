@@ -60,6 +60,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
 
                 link = element.select("link").text();
 //                if (checkLink(link)) {
+//
 //                    Document doc_image = Jsoup.connect(link).get();
 //                    Element tbody = doc_image.select("tbody img").first();
                 arrDescription = element.select("description").text();
@@ -82,17 +83,17 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
                 date = element.select("pubDate").text();
 
                 VnExpress news = new VnExpress();
-                URL url = new URL(image);
-                Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
+//                URL url = new URL(image);
+//                Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
                 news.setLink(link);
-                news.setImage(bitmap);
+                news.setImage(image);
                 news.setTitle(title);
                 news.setDescription(description);
                 news.setDate(date);
 
                 arrayList_News.add(news);
-//                }
-            }
+                }
+//            }
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -152,6 +153,7 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
         }
         return result;
     }
+
 
 
 }

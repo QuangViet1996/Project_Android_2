@@ -66,12 +66,12 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
             title_video = elements.get(0).select("a").attr("title");
             link = elements.get(0).select("a").attr("href");
             image = elements.get(0).select("img").attr("src");
-            URL url = new URL(image);
-            Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
+//            URL url = new URL(image);
+//            Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
             news.setTitle(title_video);
             news.setLink(link);
             news.setVideo(link_video);
-            news.setImage(bitmap);
+            news.setImage(image);
             arrayList_Video.add(news);
             Log.d("test","getVideo: " + link_video);
 
@@ -84,12 +84,12 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
                 link_video = data_video.toString().substring(data_video.toString().indexOf("http://news.video"), data_video.toString().indexOf(".mp4") + 4);
                 title_video = element.select("a").attr("title");
                 image = elements.get(i).select("img").first().attr("src");
-                url = new URL(image);
-                bitmap = BitmapFactory.decodeStream(url.openStream());
+//                url = new URL(image);
+//                bitmap = BitmapFactory.decodeStream(url.openStream());
                 Log.d("test","getImage for: " + image);
                 VnExpress news2 = new VnExpress();
                 news2.setLink(link);
-                news2.setImage( bitmap);
+                news2.setImage( image);
                 news2.setVideo(link_video);
                 news2.setTitle(title_video);
                 arrayList_Video.add(news2);

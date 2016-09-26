@@ -7,7 +7,7 @@ import android.graphics.Bitmap;
  */
 public class VnExpress {
     String link, video, title, description, date;
-    Bitmap image;
+    String image;
 
     public String getLink() {
         return link;
@@ -49,15 +49,15 @@ public class VnExpress {
         this.date = date;
     }
 
-    public Bitmap getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(Bitmap image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
-    public VnExpress(String link, String video, String title, String description, String date, Bitmap image) {
+    public VnExpress(String link, String video, String title, String description, String date, String image) {
         this.link = link;
         this.video = video;
         this.title = title;

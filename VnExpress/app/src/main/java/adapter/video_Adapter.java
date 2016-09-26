@@ -2,6 +2,7 @@ package adapter;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.util.Log;
@@ -17,8 +18,12 @@ import android.widget.MediaController;
 import android.widget.TextView;
 import android.widget.VideoView;
 
+import com.squareup.picasso.Picasso;
 import com.vnexpress.R;
 
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 
 import model.VnExpress;
@@ -33,6 +38,7 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
     int resource;
     ArrayList<VnExpress> arr;
     MediaController mediaController;
+
 
     public video_Adapter(Activity context, int resource, ArrayList<VnExpress> arr) {
         super(context, resource, arr);
@@ -49,9 +55,11 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
 
         TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_video_title);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
+        Picasso.with(context).load(arr.get(position).getImage())
+                .error(R.drawable.item).into(imageView);
 
         txtTitle.setText(arr.get(position).getTitle());
-        imageView.setImageBitmap(arr.get(position).getImage());
+
         return convertView;
     }
 
