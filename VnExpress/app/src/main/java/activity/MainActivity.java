@@ -1,7 +1,10 @@
 package activity;
 
 
+import android.annotation.TargetApi;
 import android.content.Intent;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -14,28 +17,46 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.webkit.WebView;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.github.ksoichiro.android.observablescrollview.ObservableListView;
 import com.github.ksoichiro.android.observablescrollview.ObservableScrollViewCallbacks;
 import com.github.ksoichiro.android.observablescrollview.ObservableWebView;
 import com.github.ksoichiro.android.observablescrollview.ScrollState;
+import com.google.android.gms.appindexing.Action;
+import com.google.android.gms.appindexing.AppIndex;
+import com.google.android.gms.appindexing.Thing;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.vnexpress.R;
 
 import variables.variables;
 
 
 public class MainActivity extends AppCompatActivity
-        implements  ObservableScrollViewCallbacks, NavigationView.OnNavigationItemSelectedListener{
+        implements ObservableScrollViewCallbacks, NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener{
     ObservableListView listview;
     AsyncTask_ReadRSS asyncTask_readRSS;
     AsyncTask_VideoHTML asyncTask_video;
     variables val;
+    View tempView;
+    ImageView imageViewItem;
+    TextView txtTitle;
     int position_video;
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    private GoogleApiClient client;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,33 +84,22 @@ public class MainActivity extends AppCompatActivity
         addControl();
         addEvent();
 
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
     }
 
     private void addControl() {
         listview = (ObservableListView) findViewById(R.id.listview);
 
-        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                position_video = i;
-                Bundle bundle = new Bundle();
-                try {
-                    bundle.putString("link", asyncTask_readRSS.arrayList_News.get(i).getLink());
-                    Intent intent =  new Intent(MainActivity.this,WebView_Details.class);
-                    intent.putExtra("data",bundle);
-                    startActivity(intent);
-                }
-                catch (Exception e)
-                {
-                   // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
-                }
-            }
-        });
+
     }
 
     private void addEvent() {
         listview.setScrollViewCallbacks(this);
-        Log.d("test","url: " + val.URL.length);
+
+        listview.setOnItemClickListener(this);
+        Log.d("test", "url: " + val.URL.length);
         AsyncTask(val.URL[0]);
 
 
@@ -224,7 +234,7 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.video:
                 getSupportActionBar().setTitle("Video");
-               AsyncTask_Video();
+                AsyncTask_Video();
                 break;
         }
 
@@ -261,4 +271,86 @@ public class MainActivity extends AppCompatActivity
             }
         }
     }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        position_video = i;
+        if (tempView != null) {
+            tempView.findViewById(R.id.imageViewItemPlayer).setVisibility(View.VISIBLE);
+            tempView.findViewById(R.id.imageViewItem).setVisibility(View.VISIBLE);
+            VideoView videoView = (VideoView) tempView.findViewById(R.id.videoViewItem);
+            videoView.pause();
+            videoView.setVisibility(View.GONE);
+        }
+        tempView = view;
+        Toast.makeText(this,i+"",Toast.LENGTH_SHORT).show();
+        imageViewItem = (ImageView) view.findViewById(R.id.imageViewItemPlayer);
+
+        view.findViewById(R.id.imageViewItem).setVisibility(View.GONE);
+        final VideoView video = (VideoView) view.findViewById(R.id.videoViewItem);
+        txtTitle = (TextView) view.findViewById(R.id.videoTitle);
+        txtTitle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Bundle bundle = new Bundle();
+                try {
+                    bundle.putString("link", asyncTask_video.arrayList_Video.get(position_video).getLink());
+                    Intent intent = new Intent(MainActivity.this, WebView_Details.class);
+                    intent.putExtra("data", bundle);
+                    startActivity(intent);
+                } catch (Exception e) {
+                    // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
+                }
+            }
+        });
+        imageViewItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                imageViewItem.setVisibility(View.GONE);
+                video.setVisibility(View.VISIBLE);
+                video.setVideoPath(asyncTask_video.arrayList_Video.get(position_video).getVideo());
+                video.start();
+            }
+        });
+
+    }
+
+    /**
+     * ATTENTION: This was auto-generated to implement the App Indexing API.
+     * See https://g.co/AppIndexing/AndroidStudio for more information.
+     */
+    public Action getIndexApiAction() {
+        Thing object = new Thing.Builder()
+                .setName("Main Page") // TODO: Define a title for the content shown.
+                // TODO: Make sure this auto-generated URL is correct.
+                .setUrl(Uri.parse("http://[ENTER-YOUR-URL-HERE]"))
+                .build();
+        return new Action.Builder(Action.TYPE_VIEW)
+                .setObject(object)
+                .setActionStatus(Action.STATUS_TYPE_COMPLETED)
+                .build();
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        client.connect();
+        AppIndex.AppIndexApi.start(client, getIndexApiAction());
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+
+        // ATTENTION: This was auto-generated to implement the App Indexing API.
+        // See https://g.co/AppIndexing/AndroidStudio for more information.
+        AppIndex.AppIndexApi.end(client, getIndexApiAction());
+        client.disconnect();
+    }
+
+
 }

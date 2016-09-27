@@ -52,18 +52,18 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
         try {
             String title, arrDescription, description, link, date, image = "error";
 
-            Document doc = Jsoup.connect(url).get();
+            Document doc ;
+            if((doc = Jsoup.connect(url).get()) != null){
+                Elements elements = doc.select("item");
+                for (int i = 0; i < elements.size(); i++) {
+                    Element element = elements.get(i);
 
-            Elements elements = doc.select("item");
-            for (int i = 0; i < elements.size(); i++) {
-                Element element = elements.get(i);
-
-                link = element.select("link").text();
+                    link = element.select("link").text();
 //                if (checkLink(link)) {
 //
 //                    Document doc_image = Jsoup.connect(link).get();
 //                    Element tbody = doc_image.select("tbody img").first();
-                arrDescription = element.select("description").text();
+                    arrDescription = element.select("description").text();
 
 //                    if (tbody == null) {
 //                        image = getImage(arrDescription);
@@ -77,24 +77,24 @@ public class AsyncTask_ReadRSS extends AsyncTask<String, Integer, String> {
 //                            image = tbody.select("img").attr("src");
 //                        }
 //                    }
-                image = getImage(arrDescription);
-                title = element.select("title").text();
-                description = getDescription(arrDescription);
-                date = element.select("pubDate").text();
+                    image = getImage(arrDescription);
+                    title = element.select("title").text();
+                    description = getDescription(arrDescription);
+                    date = element.select("pubDate").text();
 
-                VnExpress news = new VnExpress();
+                    VnExpress news = new VnExpress();
 //                URL url = new URL(image);
 //                Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
-                news.setLink(link);
-                news.setImage(image);
-                news.setTitle(title);
-                news.setDescription(description);
-                news.setDate(date);
+                    news.setLink(link);
+                    news.setImage(image);
+                    news.setTitle(title);
+                    news.setDescription(description);
+                    news.setDate(date);
 
-                arrayList_News.add(news);
+                    arrayList_News.add(news);
                 }
 //            }
-
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

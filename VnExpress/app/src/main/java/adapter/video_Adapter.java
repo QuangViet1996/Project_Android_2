@@ -53,8 +53,8 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
 
         convertView = inflater.inflate(R.layout.item_video, null);
 
-        TextView txtTitle = (TextView) convertView.findViewById(R.id.txt_video_title);
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageView);
+        TextView txtTitle = (TextView) convertView.findViewById(R.id.videoTitle);
+        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageViewItem);
         Picasso.with(context).load(arr.get(position).getImage())
                 .error(R.drawable.item).into(imageView);
 

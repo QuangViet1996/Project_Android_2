@@ -3,174 +3,111 @@
 
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.4.0_8aba21e8dd7cee3ad3e12ed71d7656e4dea7dd44\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-basement-9.4.0_8aba21e8dd7cee3ad3e12ed71d7656e4dea7dd44.jar" />
+        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_bf276a95cacd775170d3e20d165b638cad4ebff0\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.8.3_63060941746b6c521d26b3d12c4c97e8a2761823\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.0_5a64e809fa5f97bdf7ac85820310580b8ea47762\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.5.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.github.ksoichiro-android-observablescrollview-1.5.0_1dba92b100ce08275c40b139e8042a902bf0bbe1.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.4.0_b175860768ee7d0c2f60d8504af43c442c1fef14\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\jsoup-1.8.3_63060941746b6c521d26b3d12c4c97e8a2761823.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.1.0_5a64e809fa5f97bdf7ac85820310580b8ea47762.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.android.support-cardview-v7-23.1.0_1f26e7f503028cd59b47e4d8c6c7d0a015ea8837.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.1.0_1f26e7f503028cd59b47e4d8c6c7d0a015ea8837\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-base-9.4.0_b175860768ee7d0c2f60d8504af43c442c1fef14.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.5.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.ksoichiro-android-observablescrollview-1.5.0_1dba92b100ce08275c40b139e8042a902bf0bbe1\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_025e5a72d904d92c0976d51723e8dbcec118458f\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.1.0_222ae70bad3e87515b960c329872f0fa74f0dfdc.jar" />
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.1.0_497ec7d3866e916710d98bee1ecba39174763352\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.4.0_78ec2d6e1b34735d6d3d221857d6a279ec1b0150\classes.dex" />
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.4.0_da356c2e8b9dc7b952e0b5e6d267e32499155a14\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Joyboy\AppData\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_7fe9ec09cbf9c4bd2a59158eca8e2456dab90c77\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Joyboy\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.1.1\ab19bfb23f641f189b6dca9a4d393f8dc291103a\picasso-2.1.1.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\picasso-2.1.1_74a037fc4218e0aea43fbd327e23b8143afdec0c.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="e454c414a069241ee08444d187f2dd3a702596b5">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-maps-9.4.0_a853f43399ca4954c1a6460ec5a19c290f107e36.jar" />
+        sha1="d96886efea7cc74fbb3abd0e3b51d5638fc57be0">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-23.1.0_e29779fa7823372bc081ee11602483a2af13f4c5\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="7d4622aaeb6aa2325ef3dab453cbd6c5890cfbf7">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_289165386280d0080b4a6eba05bd5efbed12130f\classes.dex" />
+        sha1="3f151e49c316a5ab2c065969a3b3b55ef9b393fc">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-23.1.0_e27d1cfabe2655cd422f5fbd1bcddab8e1fdcacf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="618485fef3ebe12127f7622abbc9b5b39057b5c2">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.4.0_a015be330ee89f65cfe9136c96e9df352ca6daf3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="bd739c97fd2fdcaf21ad61f09ab951cc2f4ed276">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_b098aee0df8d03c0f892e8f83c4759111175ba40\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="991628804faa288eeeedf4a14cecd2e966107841">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_1b56364aa11f3705c6ead257f741bf7652d5df32\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.0_13bf3df997fbb0c170c5beb327498653fbc0d697\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="c10df7344e31161852c20bb8143fc37319aa10ec">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-9.4.0_696f4b3e8860f83381c65bd8e9c5e314b42a640e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\libs\jsoup-1.8.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\2\jsoup-1.8.3_293324843f77716d49b61c7d66ab2d5d0d2990e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_70412c99d829dde9eb87e463acd8109a46543062\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -179,97 +116,52 @@
         optimize="true"
         revision="23.0.2"
         sha1="ab19bfb23f641f189b6dca9a4d393f8dc291103a">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.1.1_74a037fc4218e0aea43fbd327e23b8143afdec0c\classes.dex" />
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\picasso-2.1.1_74a037fc4218e0aea43fbd327e23b8143afdec0c\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\design\23.1.0\jars\classes.jar"
+        jar="C:\Users\Joyboy\Documents\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
         jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="19026d31f5d3ae868db81319671a642be5fbba08">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.1.0_222ae70bad3e87515b960c329872f0fa74f0dfdc\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.1.0_fb80e396c46c010a84cf1e319a82b97f621e9ab9.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\libs\internal_impl-23.1.0.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8716243bf04bae8d6c9ca94d27b9a9be7236f0a3">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.0_025e5a72d904d92c0976d51723e8dbcec118458f.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="57ae0d750ff83f0c738d21720224ac7ea866a094">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.1.0_fb80e396c46c010a84cf1e319a82b97f621e9ab9\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.4.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="8a36d229011e75f0caef408e1adf0d3fd4d94e02">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.google.android.gms-play-services-tasks-9.4.0_78ec2d6e1b34735d6d3d221857d6a279ec1b0150.jar" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="23.0.2"
-        sha1="03791c95900766967cdf6c3548276dc4a84e9d4b">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_e0caf8b3245462bb57ef2f59642f8173ea05307d\classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="23.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.1.0_f72aeaf0cc58f89dc48da48202a8dade46b418b2.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="C:\Users\Joyboy\AppData\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.0\support-annotations-23.1.0.jar"
-        jumboMode="false"
         optimize="true"
         revision="23.0.2"
         sha1="92e3fc113ec3ee36b64603a38857b95700025633">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.0_7fe9ec09cbf9c4bd2a59158eca8e2456dab90c77.jar" />
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.1.0_bc6d06b70273139cc717dcb2ce53781321e0c1e2\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.4.0\jars\classes.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="18b5697c65c4fe5b7381613b8b8ae9ac52e26fa7">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.4.0_dbacf6ff8fa9b6df6175078eec192f2fecd82696\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.4.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.2"
+        sha1="3dee4ce5844d39d843d503fb8fe04e51e5bfffac">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.4.0_689ed43eea5fa9f6cbd41fec5635bb5519e27a4e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-maps\9.4.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
         sha1="e454c414a069241ee08444d187f2dd3a702596b5">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.4.0_a853f43399ca4954c1a6460ec5a19c290f107e36\classes.dex" />
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-maps-9.4.0_be4f511a20bbe611f7581a0ba8a6e5e515d7555c\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.0\jars\classes.jar"
+        jar="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\exploded-aar\com.github.ksoichiro\android-observablescrollview\1.5.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="23.0.2"
-        sha1="ddde541c289c8b816a8f8fd6c325d80788c522a6">
-        <dex dex="D:\DOCUMENT\Android\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.1.0_f72aeaf0cc58f89dc48da48202a8dade46b418b2\classes.dex" />
+        sha1="010ee9e87a286afcaeaed368dcf829e42d0aa2a0">
+        <dex dex="D:\DOCUMENT\AndroidStudio\VNEXPRESS_G6\VnExpress\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.github.ksoichiro-android-observablescrollview-1.5.0_4b7df9f94128ca1b805938aa352dc1771803cb17\classes.dex" />
     </item>
 
 </items>
