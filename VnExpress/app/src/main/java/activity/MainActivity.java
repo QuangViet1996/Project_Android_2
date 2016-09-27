@@ -42,7 +42,7 @@ import variables.variables;
 
 
 public class MainActivity extends AppCompatActivity
-        implements ObservableScrollViewCallbacks, NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener{
+        implements ObservableScrollViewCallbacks, NavigationView.OnNavigationItemSelectedListener, AdapterView.OnItemClickListener {
     ObservableListView listview;
     AsyncTask_ReadRSS asyncTask_readRSS;
     AsyncTask_VideoHTML asyncTask_video;
@@ -276,43 +276,36 @@ public class MainActivity extends AppCompatActivity
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         position_video = i;
         if (tempView != null) {
-            tempView.findViewById(R.id.imageViewItemPlayer).setVisibility(View.VISIBLE);
-            tempView.findViewById(R.id.imageViewItem).setVisibility(View.VISIBLE);
-            VideoView videoView = (VideoView) tempView.findViewById(R.id.videoViewItem);
-            videoView.pause();
-            videoView.setVisibility(View.GONE);
+            if (asyncTask_video.arrayList_Video.get(position_video).getLink() == null) {
+                tempView.findViewById(R.id.imageViewItemPlayer).setVisibility(View.VISIBLE);
+                tempView.findViewById(R.id.imageViewItem).setVisibility(View.VISIBLE);
+                VideoView videoView = (VideoView) tempView.findViewById(R.id.videoViewItem);
+                videoView.pause();
+                videoView.setVisibility(View.GONE);
+            }
         }
-        tempView = view;
-        Toast.makeText(this,i+"",Toast.LENGTH_SHORT).show();
-        imageViewItem = (ImageView) view.findViewById(R.id.imageViewItemPlayer);
-
-        view.findViewById(R.id.imageViewItem).setVisibility(View.GONE);
-        final VideoView video = (VideoView) view.findViewById(R.id.videoViewItem);
-        txtTitle = (TextView) view.findViewById(R.id.videoTitle);
-        txtTitle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-                Bundle bundle = new Bundle();
-                try {
-                    bundle.putString("link", asyncTask_video.arrayList_Video.get(position_video).getLink());
-                    Intent intent = new Intent(MainActivity.this, WebView_Details.class);
-                    intent.putExtra("data", bundle);
-                    startActivity(intent);
-                } catch (Exception e) {
-                    // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
-                }
+        Toast.makeText(this, i + "", Toast.LENGTH_SHORT).show();
+        if (asyncTask_video.arrayList_Video.get(position_video).getLink() != null) {
+            txtTitle = (TextView) view.findViewById(R.id.videoTitle);
+            Bundle bundle = new Bundle();
+            try {
+                bundle.putString("link", asyncTask_video.arrayList_Video.get(position_video).getLink());
+                Intent intent = new Intent(MainActivity.this, WebView_Details.class);
+                intent.putExtra("data", bundle);
+                startActivity(intent);
+            } catch (Exception e) {
+                // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
             }
-        });
-        imageViewItem.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                imageViewItem.setVisibility(View.GONE);
-                video.setVisibility(View.VISIBLE);
-                video.setVideoPath(asyncTask_video.arrayList_Video.get(position_video).getVideo());
-                video.start();
-            }
-        });
+        } else {
+            tempView = view;
+            final VideoView video = (VideoView) view.findViewById(R.id.videoViewItem);
+            imageViewItem = (ImageView) view.findViewById(R.id.imageViewItemPlayer);
+            view.findViewById(R.id.imageViewItem).setVisibility(View.GONE);
+            imageViewItem.setVisibility(View.GONE);
+            video.setVisibility(View.VISIBLE);
+            video.setVideoPath(asyncTask_video.arrayList_Video.get(position_video).getVideo());
+            video.start();
+        }
 
     }
 

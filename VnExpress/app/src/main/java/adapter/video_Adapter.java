@@ -51,15 +51,17 @@ public class video_Adapter extends ArrayAdapter<VnExpress> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
 
-        convertView = inflater.inflate(R.layout.item_video, null);
-
-        TextView txtTitle = (TextView) convertView.findViewById(R.id.videoTitle);
-        ImageView imageView = (ImageView) convertView.findViewById(R.id.imageViewItem);
-        Picasso.with(context).load(arr.get(position).getImage())
-                .error(R.drawable.item).into(imageView);
-
-        txtTitle.setText(arr.get(position).getTitle());
-
+        if (arr.get(position).getImage() != null) {
+            convertView = inflater.inflate(R.layout.item_video, null);
+            ImageView imageView = (ImageView) convertView.findViewById(R.id.imageViewItem);
+            Picasso.with(context).load(arr.get(position).getImage())
+                    .error(R.drawable.item).into(imageView);
+        }
+        if (arr.get(position).getTitle() != null) {
+            convertView = inflater.inflate(R.layout.item_video_title, null);
+            TextView txtTitle = (TextView) convertView.findViewById(R.id.videoTitle);
+            txtTitle.setText(arr.get(position).getTitle());
+        }
         return convertView;
     }
 

@@ -58,7 +58,8 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
 
             Document doc = Jsoup.connect(url).get();
             Log.d("test", "url:" + doc);
-            VnExpress news = new VnExpress();
+            VnExpress newsTitle = new VnExpress();
+            VnExpress newsImage = new VnExpress();
 
             Elements elements = doc.select("div.item_video");
             Elements getVideo = doc.select("div#main_player script");
@@ -68,11 +69,12 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
             image = elements.get(0).select("img").attr("src");
 //            URL url = new URL(image);
 //            Bitmap bitmap = BitmapFactory.decodeStream(url.openStream());
-            news.setTitle(title_video);
-            news.setLink(link);
-            news.setVideo(link_video);
-            news.setImage(image);
-            arrayList_Video.add(news);
+            newsTitle.setTitle(title_video);
+            newsTitle.setLink(link);
+            newsImage.setVideo(link_video);
+            newsImage.setImage(image);
+            arrayList_Video.add(newsImage);
+            arrayList_Video.add(newsTitle);
             Log.d("test","getVideo: " + link_video);
 
             for (int i = 1; i < elements.size(); i++) {
@@ -87,12 +89,15 @@ public class AsyncTask_VideoHTML extends AsyncTask<String, Integer, String> {
 //                url = new URL(image);
 //                bitmap = BitmapFactory.decodeStream(url.openStream());
                 Log.d("test","getImage for: " + image);
-                VnExpress news2 = new VnExpress();
-                news2.setLink(link);
-                news2.setImage( image);
-                news2.setVideo(link_video);
-                news2.setTitle(title_video);
-                arrayList_Video.add(news2);
+                VnExpress newsTitle2 = new VnExpress();
+                VnExpress newsImage2 = new VnExpress();
+
+                newsTitle2.setLink(link);
+                newsTitle2.setTitle(title_video);
+                newsImage2.setImage( image);
+                newsImage2.setVideo(link_video);
+                arrayList_Video.add(newsImage2);
+                arrayList_Video.add(newsTitle2);
             }
         } catch (IOException e) {
             e.printStackTrace();
