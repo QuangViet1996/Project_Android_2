@@ -10,6 +10,7 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -49,8 +50,9 @@ public class MainActivity extends AppCompatActivity
     variables val;
     View tempView;
     ImageView imageViewItem;
+    SwipeRefreshLayout swipeRefreshLayout;
     TextView txtTitle;
-    int position_video;
+    int position;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -91,14 +93,27 @@ public class MainActivity extends AppCompatActivity
 
     private void addControl() {
         listview = (ObservableListView) findViewById(R.id.listview);
-
+        swipeRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout);
 
     }
 
     private void addEvent() {
         listview.setScrollViewCallbacks(this);
-
         listview.setOnItemClickListener(this);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                if (asyncTask_readRSS.url != null) {
+                    swipeRefreshLayout.setRefreshing(true);
+                    AsyncTask(asyncTask_readRSS.url);
+                    swipeRefreshLayout.setRefreshing(false);
+                } else {
+                    swipeRefreshLayout.setRefreshing(true);
+                    AsyncTask_Video();
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+            }
+        });
         Log.d("test", "url: " + val.URL.length);
         AsyncTask(val.URL[0]);
 
@@ -274,39 +289,58 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        position_video = i;
-        if (tempView != null) {
-            if (asyncTask_video.arrayList_Video.get(position_video).getLink() == null) {
-                tempView.findViewById(R.id.imageViewItemPlayer).setVisibility(View.VISIBLE);
-                tempView.findViewById(R.id.imageViewItem).setVisibility(View.VISIBLE);
-                VideoView videoView = (VideoView) tempView.findViewById(R.id.videoViewItem);
-                videoView.pause();
-                videoView.setVisibility(View.GONE);
+        position = i;
+        try {
+            if (asyncTask_video.arrayList_Video != null) {
+                if (tempView != null) {
+                    if (asyncTask_video.arrayList_Video.get(position).getVideo() != null) {
+                        tempView.findViewById(R.id.imageViewItemPlayer).setVisibility(View.VISIBLE);
+                        tempView.findViewById(R.id.imageViewItem).setVisibility(View.VISIBLE);
+                        VideoView videoView = (VideoView) tempView.findViewById(R.id.videoViewItem);
+                        videoView.pause();
+                        videoView.setVisibility(View.GONE);
+                    } else {
+                        Toast.makeText(MainActivity.this, "Lỗi!!!", Toast.LENGTH_LONG).show();
+                    }
+                }
+                if (asyncTask_video.arrayList_Video.get(position).getLink() != null) {
+                    txtTitle = (TextView) view.findViewById(R.id.videoTitle);
+                    Bundle bundle = new Bundle();
+                    try {
+                        if (asyncTask_video.arrayList_Video.get(position).getLink() != null) {
+                            bundle.putString("link", asyncTask_video.arrayList_Video.get(position).getLink());
+                            Intent intent = new Intent(MainActivity.this, WebView_Details.class);
+                            intent.putExtra("data", bundle);
+                            startActivity(intent);
+                        } else {
+                            Toast.makeText(MainActivity.this, "Lỗi!!!", Toast.LENGTH_LONG).show();
+                        }
+                    } catch (Exception e) {
+                        // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
+                    }
+                } else {
+                    tempView = view;
+                    final VideoView video = (VideoView) view.findViewById(R.id.videoViewItem);
+                    imageViewItem = (ImageView) view.findViewById(R.id.imageViewItemPlayer);
+                    view.findViewById(R.id.imageViewItem).setVisibility(View.GONE);
+                    imageViewItem.setVisibility(View.GONE);
+                    video.setVisibility(View.VISIBLE);
+                    video.setVideoPath(asyncTask_video.arrayList_Video.get(position).getVideo());
+                    video.start();
+                }
+
             }
-        }
-        Toast.makeText(this, i + "", Toast.LENGTH_SHORT).show();
-        if (asyncTask_video.arrayList_Video.get(position_video).getLink() != null) {
-            txtTitle = (TextView) view.findViewById(R.id.videoTitle);
-            Bundle bundle = new Bundle();
-            try {
-                bundle.putString("link", asyncTask_video.arrayList_Video.get(position_video).getLink());
+            else{
+                Bundle bundle = new Bundle();
+                bundle.putString("link", asyncTask_readRSS.arrayList_News.get(position).getLink());
                 Intent intent = new Intent(MainActivity.this, WebView_Details.class);
                 intent.putExtra("data", bundle);
                 startActivity(intent);
-            } catch (Exception e) {
-                // bundle.putString("link", asyncTask_video.arrayList_Video.get(i).getLink());
             }
-        } else {
-            tempView = view;
-            final VideoView video = (VideoView) view.findViewById(R.id.videoViewItem);
-            imageViewItem = (ImageView) view.findViewById(R.id.imageViewItemPlayer);
-            view.findViewById(R.id.imageViewItem).setVisibility(View.GONE);
-            imageViewItem.setVisibility(View.GONE);
-            video.setVisibility(View.VISIBLE);
-            video.setVideoPath(asyncTask_video.arrayList_Video.get(position_video).getVideo());
-            video.start();
         }
-
+        catch(Exception ex){
+            Toast.makeText(MainActivity.this, "Lỗi!!! Không thể tải tin....", Toast.LENGTH_LONG).show();
+        }
     }
 
     /**

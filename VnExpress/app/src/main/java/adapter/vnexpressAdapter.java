@@ -48,9 +48,8 @@ public class vnexpressAdapter extends ArrayAdapter<VnExpress> {
         TextView txtDescription = (TextView) convertView.findViewById(R.id.txt_description);
         TextView txtDate = (TextView) convertView.findViewById(R.id.txt_time);
         ImageView imageView = (ImageView) convertView.findViewById(R.id.img);
-        Picasso.with(context).load(arr.get(position).getImage()).into(imageView);
 
-
+        Picasso.with(context).load(arr.get(position).getImage()).error(R.drawable.item).into(imageView);
         Log.d("test","titleadapter: " + arr.get(position) + arr.get(position).getTitle());
         txtTitle.setText( arr.get(position).getTitle());
         txtDescription.setText( arr.get(position).getDescription());
